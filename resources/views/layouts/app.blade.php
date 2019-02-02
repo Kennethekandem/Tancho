@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Tancho</title>
+	<title>Tancho	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -66,8 +66,12 @@
     <script src="{{ asset('assets/js/libs/jquery-1.12.4.min.js') }}"></script>
     <script src="{{ asset('assets/js/libs/masonry.pkgd.min.js') }}"></script>
     <script src="{{ asset('assets/js/libs/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scripts.js') }}"></script>
+	<script src="{{ asset('assets/js/scripts.js') }}"></script>
+	<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'article-ckeditor' );
+    </script>
     <!-- End Scripts -->
 
     </body>
-    </html>    
+</html> 

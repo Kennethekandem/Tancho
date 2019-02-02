@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('tancho/single', 'tancho.single', ['name' => 'single']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

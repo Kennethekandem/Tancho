@@ -45,7 +45,7 @@
                                 <a href="#">Travel</a>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="single.html">Single</a>
+                                <a href="tancho/single">Single</a>
                                 <ul class="sub-menu">
                                     <li>
                                         <a href="single.html">Image</a>
