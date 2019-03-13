@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Tancho	</title>
+	<title>{{ config('app.name', 'Tancho') }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSRF Token -->
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="icon" href="images/favicon.png.html" sizes="32x32" />
 
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700%7CCrete+Round' type='text/css' media='all' />
@@ -68,6 +71,7 @@
     <script src="{{ asset('assets/js/libs/imagesloaded.pkgd.min.js') }}"></script>
 	<script src="{{ asset('assets/js/scripts.js') }}"></script>
 	<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
     </script>

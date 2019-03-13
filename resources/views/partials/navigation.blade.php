@@ -67,6 +67,30 @@
                             <li>
                                 <a href="contact.html">Contact</a>
                             </li>
+                            @guest
+                                <li>
+                                    <a href="{{ route('login') }}">Login</a>
+                                </li>
+                                @if(Route::has('register'))
+                                    <li>
+                                        <a href="{{ route('register') }}">Register</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li>
+                                    <a href="{{ route('home') }}">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('user.logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </li>
+                            @endguest
                         </ul>
                     </nav>
                 </div>
